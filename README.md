@@ -33,3 +33,10 @@ CREATE TABLE club_member_info_cleaned (
 INSERT INTO club_member_info_cleaned
 Select * FROM club_member_info;
 ```
+### Cleaning age that out of range from 0 to 100
+Find averange age = 44.85 with outliter using SQL
+
+```SELECT AVG(AGE) FROM club_member_info_cleaned```
+
+Find averange by Power BI without outliter and blank value
+![Age by status](Divorced by age.png)
