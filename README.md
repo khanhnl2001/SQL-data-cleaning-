@@ -16,7 +16,7 @@
 | fey kloss|52|married|fkloss9@godaddy.com|808-177-0318|8976 Jackson Park,Honolulu,Hawaii|Chemical Engineer|11/5/2014|
 ### Creating a new table for cleaning 
 #### Let's generate a new table where we can manipulate and restructure the data without modifying the origanal dataset
-
+```
 CREATE TABLE club_member_info_cleaned (
 	full_name VARCHAR(50),
 	age INTEGER,
@@ -27,7 +27,9 @@ CREATE TABLE club_member_info_cleaned (
 	job_title VARCHAR(50),
 	membership_date VARCHAR(50)
 );
-
+```
 ### Copy all value from original table 
+```
 INSERT INTO club_member_info_cleaned
 Select * FROM club_member_info;
+```
