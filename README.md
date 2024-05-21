@@ -34,9 +34,24 @@ INSERT INTO club_member_info_cleaned
 Select * FROM club_member_info;
 ```
 ### Cleaning age that out of range from 0 to 100
-Find averange age = 44.85 with outliter using SQL
+#### Find averange age = 44.85 with outlier  using SQL
 
 ```SELECT AVG(AGE) FROM club_member_info_cleaned```
 
-Find averange by Power BI without outliter and blank value
-![Age by status](Divorced by age.png)
+#### Find averange age by Power BI without outlier  and blank value
+##### Divorced  
+![Age by status](https://github.com/khanhnl2001/SQL-data-cleaning-/blob/main/Image/Divorced%20by%20age.png)
+##### Married 
+![Age by status](https://github.com/khanhnl2001/SQL-data-cleaning-/blob/main/Image/Married%20by%20age.png)
+##### Single 
+![Age by status](https://github.com/khanhnl2001/SQL-data-cleaning-/blob/main/Image/Single%20by%20age.png)
+
+#### Update all blank age and outlifter age in SQL to averange age of 44
+
+```
+UPDATE club_member_info_cleaned
+SET age = 44
+WHERE age>100 OR age ISNULL
+```
+
+
